@@ -4,7 +4,7 @@
   "description": "Node frontend to control VPN connections via NetworkManager's cli",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
