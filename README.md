@@ -1,6 +1,8 @@
 # node-nm-vpn
 Control VPN connections from node using NetworkManager's cli.
 
+## Fair warning
+
 I use this to switch VPNs on my Raspberry Pi - what will you use it for? Probably not a production app; this is very thrown-together stuff...
 
 That said, here are a few things you'll need to bear in mind:
@@ -25,4 +27,22 @@ If your app uses this module and is started via SSH then you may receive this er
 `Connection activation failed: Not authorized to control networking.`
 
 I believe this occurs because while desktop users get granted the CAP_NET_ADMIN capability, remote (i.e. SSH) users do not, and are therefore unable to bring connections up or down. You can get around this by having your app run as root, but I that's not recommended for obvious reasons. I've tried using `setcap` to add the capability manually but that results in timeout errors when (de)activating connections, so your best bet right now is to start the app as a desktop user. For me that means plugging in a keyboard and screen to my Pi and starting the app locally. If anyone knows a workaround, please feel free to submit a pull request or raise an issue. I may post on AskUbuntu when I get a sec.
+
+
+## Usage
+```javascript
+var connectionManager = require('node-nm-vpn');
+
+// Get list of available VPN connections
+var connections = connectionManager.connections;
+
+// Get active VPN connection (if any)
+var activeConnection = connectionManager.active;
+
+// Bring a connection up (will first take down any active connection)
+connectionManager.up(connections[0].id);
+
+// Take a connection down
+connectionManager.down(connections[0].id);
+```
 
