@@ -1,0 +1,23 @@
+{
+  "name": "node-nm-vpn",
+  "version": "0.0.0",
+  "description": "Node frontend to control VPN connections via NetworkManager's cli",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itsravenous/node-nm-vpn.git"
+  },
+  "keywords": [
+    "NetworkManager",
+    "networking"
+  ],
+  "author": "Tom Jenkins <tom@itsravenous.com> (http://itsravenous.com)",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/itsravenous/node-nm-vpn/issues"
+  },
+  "homepage": "https://github.com/itsravenous/node-nm-vpn#readme"
+}
