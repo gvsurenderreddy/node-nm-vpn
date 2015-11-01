@@ -1,5 +1,5 @@
 {
-  "name": "node-nm-vpn",
+  "name": "nm-vpn",
   "version": "0.1.0",
   "description": "Node frontend to control VPN connections via NetworkManager's cli",
   "main": "index.js",
